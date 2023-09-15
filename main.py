@@ -19,7 +19,7 @@ conn.commit()
 
 @bot.message_handler(commands=['start'])
 def start_handler(message):
-    bot.send_message(message.chat.id, f"{message.from_user.first_name}, Привет!\nДля участия в розыгрыше отправьте ссылку на ваш профиль\n\n")
+    bot.send_message(message.chat.id, f"{message.from_user.first_name}, Hello!\nSend your profile link to enter the draw\n\n")
 
 @bot.message_handler(func=lambda message: message.text.startswith("http"))
 def link_handler(message):
